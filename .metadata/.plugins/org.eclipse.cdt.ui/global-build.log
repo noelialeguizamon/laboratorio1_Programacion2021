@@ -1,0 +1,3 @@
+19:34:01 **** Clean-only build of configuration Debug for project ClaseUno_Bis ****
+rm -rf src/ClaseUno_Bis.o ClaseUno_Bis.exe src/ClaseUno_Bis.d 
+Info: Nothing to build for ClaseDos
