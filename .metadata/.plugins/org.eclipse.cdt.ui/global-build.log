@@ -1,14 +1,4 @@
-19:34:01 **** Clean-only build of configuration Debug for project ClaseUno_Bis ****
-rm -rf src/ClaseUno_Bis.o ClaseUno_Bis.exe src/ClaseUno_Bis.d 
-Info: Nothing to build for ClaseDos
-23:17:29 **** Incremental Build of configuration Debug for project ClaseDos ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ClaseDos.o" "..\\src\\ClaseDos.c" 
-..\src\ClaseDos.c: In function 'main':
-..\src\ClaseDos.c:28:2: error: expected 'while' before 'return'
-   28 |  return 0;
-      |  ^~~~~~
-23:18:42 **** Incremental Build of configuration Debug for project ClaseDos ****
+17:55:38 **** Rebuild of configuration Debug for project ClaseDos ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ClaseDos.o" "..\\src\\ClaseDos.c" 
 gcc -o ClaseDos.exe "src\\ClaseDos.o" 
