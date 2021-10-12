@@ -23,16 +23,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "utn_biblioteca.h"
+#include "utn_Arrays.h"
 #define TEMPERATURA_LEN 31
 
-void inicializarArrays (int arrayAInicializar[], int len, int valorInicial); //len por lengh cantidad
-int imprimirArray(int arrayAImprimir[], int len);
+
 
 int main(void){
 	setbuf(stdout, NULL);
-	float temperaturaMax;
-	int temperaturaPorDia[TEMPERATURA_LEN];
+	//float temperaturaMax;
+	float temperaturaPorDia[TEMPERATURA_LEN];
 	int menuOpciones;
+
+	inicializarArrays(temperaturaPorDia, TEMPERATURA_LEN,0);
+
+	/*for(int i=0; i<TEMPERATURA_LEN;i++){		//para ver que se inicializo bien
+
+		printf("%.2f\n", temperaturaPorDia[i]);
+	}*/
 
 	do
 	{
@@ -48,41 +55,24 @@ int main(void){
 				printf("\nUd ingreso la opcion %d\n", menuOpciones);
 				break;
 			case 3:
-				printf("\nUd ingreso la opcion %d\n, bye bye", menuOpciones);
+				printf("\nUd ingreso la opcion %d.\n\n bye bye", menuOpciones);
 				break;
 			default:
 				printf("Ud ingreso una opcion incorrecta\n");
 
 		}
+		if (menuOpciones==1)
+			{
+				imprimirArray(temperaturaPorDia, TEMPERATURA_LEN);
+			}
+		if(menuOpciones==2){
+				cargarArray(temperaturaPorDia);
+			}
+
 
 	}while(menuOpciones!=3);
 
 
-	if (menuOpciones==1)
-	{
-		imprimirArray(temperaturaMax,TEMPERATURA_LEN);
-	}
 
 	return EXIT_SUCCESS;
-}
-
-void inicializarArrays (int arrayAIniciar[], int len, int valorInicial)
-{
-	int indice;
-	for(indice=0; indice<len; indice++)
-	{
-		arrayAIniciar[indice]= valorInicial;
-	}
-
-int imprimirArray(int arraysAImprimir[], int len)
-{
-	int indice;
-	int retorno=-1;
-
-	for(indice=0; indice<len; indice++)
-	{
-		printf("%d\n",arraysAImprimir[indice]);
-		retorno=0;
-	}
-	return retorno;
 }
